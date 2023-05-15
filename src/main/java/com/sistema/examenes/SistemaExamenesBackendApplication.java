@@ -28,12 +28,12 @@ public class SistemaExamenesBackendApplication implements CommandLineRunner {
 
 	@Override
 	public void run(String... args) throws Exception {
-		/*
+/*
 		try{
 			Usuario usuario=new Usuario();
 
 			usuario.setNombre("Admin");
-			usuario.setApellido("administrado");
+			usuario.setApellido("administrador");
 			usuario.setUsername("admin");
 			usuario.setPassword(this.bCryptPasswordEncoder.encode("123"));
 			// usuario.setPassword("12345");
