@@ -1,5 +1,7 @@
 package com.sistema.examenes.entidades;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
 import java.util.LinkedHashSet;
 import java.util.Set;
@@ -22,6 +24,7 @@ public class Categoria {
     permite recorrer de forma ordenada y de forma inversa
     */
     @OneToMany(mappedBy = "categoria", cascade = CascadeType.ALL)
+    @JsonIgnore
     private Set<Examen>examenes=new LinkedHashSet<>();
 
     public Long getCategoriaId() {
