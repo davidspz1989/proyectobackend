@@ -35,6 +35,7 @@ public class PreguntaController {
         return ResponseEntity.ok(preguntaService.actualizarPregunta(pregunta));
     }
 
+
     @GetMapping("/examen/{examenId}")
     public ResponseEntity<?> listarPreguntasdelExamen(@PathVariable("examenId") Long examenId){
         Examen examen=examenServcie.obtenerExamen(examenId);
@@ -48,6 +49,7 @@ public class PreguntaController {
         Collections.shuffle(examenes);
         return ResponseEntity.ok(examenes);
     }
+
 
     @GetMapping("/{preguntaId}")
     public Pregunta listarPreguntaporId(@PathVariable("preguntaId") Long preguntaId){

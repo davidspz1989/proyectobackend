@@ -18,6 +18,7 @@ public class Pregunta {
     private String opcion2;
     private String opcion3;
     private String opcion4;
+    private String respuesta;
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonIgnore
     private Examen examen;
@@ -84,6 +85,14 @@ public class Pregunta {
 
     public void setExamen(Examen examen) {
         this.examen = examen;
+    }
+
+    public String getRespuesta() {
+        return respuesta;
+    }
+
+    public void setRespuesta(String respuesta) {
+        this.respuesta = respuesta;
     }
 
     public Pregunta(){}
