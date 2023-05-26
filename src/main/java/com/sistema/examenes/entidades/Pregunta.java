@@ -19,8 +19,9 @@ public class Pregunta {
     private String opcion3;
     private String opcion4;
     private String respuesta;
+
+    // notar como no se usa @JsonIgnore
     @ManyToOne(fetch = FetchType.EAGER)
-    @JsonIgnore
     private Examen examen;
 
     public Long getPreguntaId() {

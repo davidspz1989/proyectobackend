@@ -42,8 +42,8 @@ public class PreguntaController {
         Set<Pregunta> preguntas=examen.getPreguntas();
 
         List examenes = new ArrayList(preguntas);
-        if(examenes.size() > Integer.parseInt(examen.getNumberoDePreguntas())){
-            examenes=examenes.subList(0, Integer.parseInt(examen.getNumberoDePreguntas() + 1));
+        if(examenes.size() > Integer.parseInt(examen.getNumeroDePreguntas())){
+            examenes=examenes.subList(0, Integer.parseInt(examen.getNumeroDePreguntas())+1);
         }
 
         Collections.shuffle(examenes);

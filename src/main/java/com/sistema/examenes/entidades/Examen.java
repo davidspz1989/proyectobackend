@@ -18,10 +18,12 @@ public class Examen {
     private String titulo;
     private String descripcion;
     private String puntosMaximos;
-    private String numberoDePreguntas;
+    private String numeroDePreguntas;
     private Boolean activo=false;
     @ManyToOne(fetch = FetchType.EAGER) // ansioso
     private Categoria categoria;
+
+    // notar cuando se usa @JsonIgnore, comparado con la clase Pregunta
     @OneToMany(mappedBy = "examen", fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JsonIgnore
     private Set<Pregunta> preguntas=new HashSet<>();
@@ -58,12 +60,12 @@ public class Examen {
         this.puntosMaximos = puntosMaximos;
     }
 
-    public String getNumberoDePreguntas() {
-        return numberoDePreguntas;
+    public String getNumeroDePreguntas() {
+        return numeroDePreguntas;
     }
 
-    public void setNumberoDePreguntas(String numberoDePreguntas) {
-        this.numberoDePreguntas = numberoDePreguntas;
+    public void setNumeroDePreguntas(String numeroDePreguntas) {
+        this.numeroDePreguntas = numeroDePreguntas;
     }
 
     public Boolean getActivo() {
